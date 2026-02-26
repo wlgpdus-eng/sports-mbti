@@ -157,6 +157,18 @@ ESFP:{title:"에너지 스타",desc:"활기찬 에너지와 즐거운 분위기�
 
 let result=descriptions[type];
 
+  fetch("https://script.google.com/macros/s/AKfycbw0_vYARMaXzcRhXOkXVCswCI6vWyU9v5VR9uoxAo723t-rNDBKLqlOc5cUzo9uM2MU/exec", {
+method: "POST",
+body: JSON.stringify({
+school: document.querySelector('[name="school"]').value,
+grade: document.querySelector('[name="grade"]').value,
+class: document.querySelector('[name="class"]').value,
+number: document.querySelector('[name="number"]').value,
+name: document.querySelector('[name="name"]').value,
+mbti: type
+})
+});
+
 document.getElementById("resultBox").innerHTML=
 "<div style='background:#f3f6ff;padding:35px;border-radius:18px;text-align:center;'>"+
 "<div style='font-size:24px;font-weight:700;margin-bottom:10px;'>🎉 당신의 스포츠 MBTI</div>"+
