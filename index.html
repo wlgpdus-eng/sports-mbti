@@ -1,14 +1,8 @@
 <style>
 
-/* 질문 간격 */
-p{
-margin-top:35px;
-font-size:18px;
-}
-
 /* 라디오 버튼 크게 */
 input[type="radio"]{
-transform:scale(1.5);
+transform:scale(1.6);
 margin-right:10px;
 }
 
@@ -16,11 +10,16 @@ margin-right:10px;
 label{
 display:block;
 padding:12px;
-margin-top:5px;
+margin-top:4px;
 border-radius:10px;
 }
 
-/* 터치 시 배경 */
+/* 문제 사이 간격 */
+p + p{
+margin-top:40px;
+}
+
+/* 눌렀을 때 효과 */
 label:active{
 background:#f2f5ff;
 }
