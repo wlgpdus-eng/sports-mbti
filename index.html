@@ -1,26 +1,50 @@
 <style>
+
+/* 전체 화면 */
+body{
+font-family:Arial;
+}
+
+/* 모바일 가독성 */
+.container{
+max-width:520px;
+margin:auto;
+line-height:1.8;
+padding-bottom:200px;
+}
+
 /* 라디오 버튼 크게 */
 input[type="radio"]{
 transform:scale(1.6);
 margin-right:10px;
-}/* 눌렀을 때 효과 */
+}
+
+/* 선택 터치 효과 */
 label:active{
 background:#f2f5ff;
-}/* 문제 사이 간격 */
-p{
+}
+
+/* 문제 사이 간격 */
+.question{
 margin-top:35px;
-}<h2 style="font-size:28px;">🏀 스포츠 MBTI 검사</h2>
-  
+}
+
 </style>
-<div style="max-width:520px;margin:auto;font-family:'Arial';line-height:1.8;padding-bottom:200px;">
-<h2>🏀 스포츠 MBTI 검사</h2>
-  
+
+
+<div class="container">
+
+<h2 style="font-size:28px;">🏀 스포츠 MBTI 검사</h2>
+
 <form id="mbtiForm">
-  
+
 <!-- 학생 정보 입력 -->
 <div style="background:#f7f7f7;padding:20px;border-radius:10px;margin-bottom:30px;">
+
 <h3>학생 정보 입력</h3>
+
 <label>학교명:</label><br>
+
 <select name="school" required style="width:100%;padding:8px;margin-bottom:10px;">
 <option value="">학교 선택</option>
 <option value="잠신고">잠신고</option>
@@ -30,15 +54,20 @@ margin-top:35px;
 <option value="송파중">송파중</option>
 <option value="테스트">테스트</option>
 </select><br>
-  
+
+
 <label>학년:</label><br>
+
 <select name="grade" required style="width:100%;padding:8px;margin-bottom:10px;">
 <option value="">학년 선택</option>
 <option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
 </select><br>
+
+
 <label>반:</label><br>
+
 <select name="classNum" required style="width:100%;padding:8px;margin-bottom:10px;">
 <option value="">반 선택</option>
 <option value="1">1</option>
@@ -57,8 +86,10 @@ margin-top:35px;
 <option value="14">14</option>
 <option value="15">15</option>
 </select><br>
-  
+
+
 <label>번호:</label><br>
+
 <select name="number" required style="width:100%;padding:8px;margin-bottom:10px;">
 <option value="">번호 선택</option>
 <option value="1">1</option>
@@ -92,28 +123,49 @@ margin-top:35px;
 <option value="29">29</option>
 <option value="30">30</option>
 </select><br>
+
+
 <label>이름:</label><br>
+
 <input type="text" name="name" required style="width:100%;padding:8px;margin-bottom:10px;">
+
 </div>
+
+
 <h2>스포츠 MBTI 설문</h2>
+
 <p>각 문항에서 자신과 더 가까운 것을 선택하세요.</p>
-<!-- 1~5 -->
-<p><b>1. 체육 시간이 시작된다! 더 설레는 순간은?</b></p>
+
+
+<!-- 1 -->
+<p class="question"><b>1. 체육 시간이 시작된다! 더 설레는 순간은?</b></p>
 <label><input type="radio" name="q1" value="A" required> A. 넓은 운동장이나 자연 속 활동하는 시간이다.</label><br>
 <label><input type="radio" name="q1" value="B"> B. 체육관에서 집중하며 기술을 배우는 시간이다.</label>
-<p><b>2. 내가 더 좋아하는 체육 분위기는?</b></p>
+
+
+<!-- 2 -->
+<p class="question"><b>2. 내가 더 좋아하는 체육 분위기는?</b></p>
 <label><input type="radio" name="q2" value="A" required> A. 햇빛과 바람을 느끼며 움직이는 활동이다.</label><br>
 <label><input type="radio" name="q2" value="B"> B. 실내에서 차분하게 집중하는 활동이다.</label>
-<p><b>3. 생태형 스포츠 활동이 있다면?</b></p>
+
+
+<!-- 3 -->
+<p class="question"><b>3. 생태형 스포츠 활동이 있다면?</b></p>
 <label><input type="radio" name="q3" value="A" required> A. 트레킹, 캠핑, 야외도전 활동이 끌린다.</label><br>
 <label><input type="radio" name="q3" value="B"> B. 실내 종목을 깊이 배우는 것이 더 좋다.</label>
-<p><b>4. 체육 수행평가를 준비할 때 나는?</b></p>
+
+
+<!-- 4 -->
+<p class="question"><b>4. 체육 수행평가를 준비할 때 나는?</b></p>
 <label><input type="radio" name="q4" value="A" required> A. 친구들과 크게 움직이는 활동이 좋다.</label><br>
 <label><input type="radio" name="q4" value="B"> B. 나만의 기술을 완성해가는 활동이 좋다.</label>
-<p><b>5. 방과 후 운동을 선택한다면?</b></p>
+
+
+<!-- 5 -->
+<p class="question"><b>5. 방과 후 운동을 선택한다면?</b></p>
 <label><input type="radio" name="q5" value="A" required> A. 운동장, 공원 등 야외 활동을 선택한다.</label><br>
 <label><input type="radio" name="q5" value="B"> B. 체육관이나 실내 종목을 선택한다.</label>
-<!-- 6~10 -->
+
 <p><b>6. 스포츠를 배울 때 나는?</b></p>
 <label><input type="radio" name="q6" value="A" required> A. 일단 몸으로 해보는 게 좋다.</label><br>
 <label><input type="radio" name="q6" value="B"> B. 원리와 전략을 먼저 이해하고 싶다.</label>
